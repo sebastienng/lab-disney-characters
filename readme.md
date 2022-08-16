@@ -8,6 +8,19 @@ The data we are going to use is in `./disney.json` file.
 
 To search through this data, we are going to create our own server with different routes which we will be able to use with `Postman`.
 
+## TLDR
+
+- GET /characters : should get all characters
+- GET /characters?name=jasmine : should get jasmine
+- GET /characters/4703 : should get character with _id 4703
+
+- POST /characters : receives a character object { name, films }. and adds it as { name, films, _id } to our characters. _id should be equal to _id of last character + 1. responds with the created character. [Example response](#iteration-4-lets-create-some-characters)
+
+- Bonus: GET /characters?film=roblop : should get characters from Roblop film
+- Bonus: GET /characters?film=roblop&name=roblop : should get Roblop character from Roblop film
+
+**Consider refactoring to avoid creating new routes**
+
 ## **Iteration 1: Getting started**
 
 - Create a `app.js` file where you will write all of your server logic.
